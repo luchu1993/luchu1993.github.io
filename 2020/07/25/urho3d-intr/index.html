@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   
   
-  <title>Urho3D 容器类型 | Game Notes</title>
+  <title>Urho3D 引擎简介 | Game Notes</title>
 
   
     <link rel="apple-touch-icon" href="/images/favicon.png">
@@ -95,7 +95,7 @@
   <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
   <div class="container post-details" id="post-details">
     <div class="post-content">
-      <div class="post-title">Urho3D 容器类型</div>
+      <div class="post-title">Urho3D 引擎简介</div>
       <div class="post-attach">
         <span class="post-pubtime">2020-07-25</span>
         
@@ -123,17 +123,17 @@
           
       </div>
       <div class="markdown-body">
-        <p>Urho3D自己实现了一套常用的容器类型，包括<code>Vector</code>, <code>List</code>, <code>HashMap</code>及其相关类型。<br>容器类代码全部分布在<code>Source\Urho3D\Container</code>下, 这里的代码可以作为我们分析学习Orho3D源码入手的切入点。</p>
-<h2 id="Vector-PODVector"><a href="#Vector-PODVector" class="headerlink" title="Vector, PODVector"></a>Vector, PODVector</h2><p><code>Vector</code>类相关的代码文件为：Vector.{h, cpp}</p>
-<p>在<code>Vector</code>的类型声明中可以看<code>Vector</code>继承了<code>VectorBase</code>基类</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>&gt; <span class="title">class</span> <span class="title">Vector</span> :</span> <span class="keyword">public</span> VectorBase</span><br></pre></td></tr></table></figure>
-<p><code>VectorBase</code>中存有大小(size_), 容量(capacity_), 以及内部存储(buffer_); 其还提供了<code>Swap</code>方法，用于交换两个<code>Vector</code>，在<br>实现右值构造的时候会用到这个方法。</p>
-<p><code>Vector</code>为内存连续的变长数组，引擎提供了添加，删除，访问，修改等操作，与C++标准<code>std::vector</code>用法类似。</p>
-<h2 id="List-LinkedList"><a href="#List-LinkedList" class="headerlink" title="List, LinkedList"></a>List, LinkedList</h2><h2 id="HashMap-HashSet"><a href="#HashMap-HashSet" class="headerlink" title="HashMap, HashSet"></a>HashMap, HashSet</h2>
+        <p>##</p>
+
       </div>
       
         <div class="prev-or-next">
           <div class="post-foot-next">
+            
+              <a href="/2020/07/25/urho3d-container/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>PREV</span>
+              </a>
             
           </div>
           <div class="post-attach">
@@ -164,28 +164,11 @@
           </div>
           <div class="post-foot-prev">
             
-              <a href="/2020/07/25/urho3d-intr/" target="_self">
-                <span>NEXT</span>
-                <i class="iconfont icon-chevronright"></i>
-              </a>
-            
           </div>
         </div>
       
     </div>
     
-  <div class="post-catalog" id="catalog">
-    <div class="title">目录</div>
-    <div class="catalog-content">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Vector-PODVector"><span class="toc-text">Vector, PODVector</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#List-LinkedList"><span class="toc-text">List, LinkedList</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HashMap-HashSet"><span class="toc-text">HashMap, HashSet</span></a></li></ol>
-    </div>
-  </div>
-
-  
-<script src="/js/catalog.js"></script>
-
-
-
 
     
       <div class="comments-container">

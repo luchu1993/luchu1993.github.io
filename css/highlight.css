@@ -24,7 +24,8 @@
     width: 100%;
     padding-left: 10px;
     padding-right: 10px;
-    background-color: #2d2d2d;
+    color: #1b1b1b;
+    background-color: #1b1b1b
 }
 
 .markdown-body .highlight table tbody pre {

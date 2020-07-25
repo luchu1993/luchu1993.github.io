@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   
   
-  <title>Urho3D 引擎简介 | Game Notes</title>
+  <title>Urho3D核心类型之Object | Game Notes</title>
 
   
     <link rel="apple-touch-icon" href="/images/favicon.png">
@@ -95,7 +95,7 @@
   <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
   <div class="container post-details" id="post-details">
     <div class="post-content">
-      <div class="post-title">Urho3D 引擎简介</div>
+      <div class="post-title">Urho3D核心类型之Object</div>
       <div class="post-attach">
         <span class="post-pubtime">2020-07-25</span>
         
@@ -123,17 +123,13 @@
           
       </div>
       <div class="markdown-body">
-        <p>Urho3D是一款开源的跨平台3D游戏引擎，借鉴和吸收了Orge渲染引擎的优点。代码非常清晰规整，是学习引擎源码非常好的入门教程:) </p>
+        <p><code>Object</code>是Urho3D中大部分类型的基类，其提供了静态类型信息，事件的收发机制。<code>Object</code>提供了事件机制解耦了引擎各个系统的交互，是整个引擎的基石。</p>
+<h2 id="Object的静态类型信息"><a href="#Object的静态类型信息" class="headerlink" title="Object的静态类型信息"></a>Object的静态类型信息</h2><h2 id="Object的事件机制"><a href="#Object的事件机制" class="headerlink" title="Object的事件机制"></a>Object的事件机制</h2><p>事件机制就是观察者设计模式。有了事件机制，当一个对象想调用另外若干个对象方法的时候，不需要直接访问对象来调用相关的方法，只需要派发对应的事件即可。<br>需要关心此事件的其他对象，只要在创建时订阅此事件即可。所谓订阅事件即时注册自己用于处理此事件的回调函数。事件发生时，会在事件派发函数中逐个查询订阅<br>此事件的对象，并调用其注册的方法。</p>
 
       </div>
       
         <div class="prev-or-next">
           <div class="post-foot-next">
-            
-              <a href="/2020/07/25/urho3d-container/" target="_self">
-                <i class="iconfont icon-chevronleft"></i>
-                <span>PREV</span>
-              </a>
             
           </div>
           <div class="post-attach">
@@ -164,11 +160,28 @@
           </div>
           <div class="post-foot-prev">
             
+              <a href="/2020/07/25/urho3d-container/" target="_self">
+                <span>NEXT</span>
+                <i class="iconfont icon-chevronright"></i>
+              </a>
+            
           </div>
         </div>
       
     </div>
     
+  <div class="post-catalog" id="catalog">
+    <div class="title">目录</div>
+    <div class="catalog-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Object的静态类型信息"><span class="toc-text">Object的静态类型信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Object的事件机制"><span class="toc-text">Object的事件机制</span></a></li></ol>
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
 
     
       <div class="comments-container">
